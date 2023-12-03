@@ -1,0 +1,168 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: inline-block;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+body {
+    margin: 0;
+    background: #F7F8F4;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #fff;
+    font-size: 1rem;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra horizontalmente dentro del viewport */
+}
+.topnav .text-wrapper {
+    font-family: "Poppins", Helvetica;
+    font-weight: 700;
+    color: #5b6b3a;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+.topnav .text-wrapper-2 {
+    font-family: "Poppins", Helvetica;
+    font-weight: 600;
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+
+.topnav-container {
+    width: 80%; /* Ajusta el ancho del contenedor según tus necesidades */
+    display: flex;
+    justify-content: space-between;
+}
+
+.topnav .text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.topnav .text-wrapper {
+    margin-bottom: 10px;
+}
+
+#plant-icon {
+    font-size: 2rem; /* Ajusta el tamaño del ícono según tus preferencias */
+    margin-left: 10px; /* Ajusta el espacio entre la planta y el texto según tus necesidades */
+}
+
+#authentication-bar{
+    background-color:mintcream;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#user-details{
+    color: cadetblue;
+}
+
+.content {
+    padding: 20px;
+}
+
+.dashboard-title {
+    font-family: "Poppins", Helvetica;
+    font-weight: 600;
+    color: #252525;
+    font-size: 20px; /* Puedes ajustar el tamaño del texto según tus preferencias */
+    letter-spacing: -0.3px;
+    line-height: 160%; /* Puedes ajustar la altura de línea según tus preferencias */
+    margin-bottom: 10px; /* Puedes ajustar el margen inferior según tus preferencias */
+}
+
+
+.card {
+    background-color: white;
+    box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5);
+    padding: 5%;
+}
+
+.cards {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.reading {
+    font-size: 1.4rem;
+}
+
+button {
+    background-color: #4D536D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    
+}
+button:hover {
+    opacity: 0.8;
+}
+
+.form-elements-container{
+    padding: 16px;
+    width: 250px;
+    margin: 0 auto;
+    background: #F7F8F4;
+}
+.form-elements-container label {
+    font-family: "Poppins", Helvetica;
+    font-weight: 500;
+    color: #4e4e4e;
+    font-size: 14px;
+    letter-spacing: -0.3px;
+    line-height: 24.6px;
+    display: block;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+input[type=text], input[type=password] {
+    font-family: "Poppins", Helvetica;
+    font-weight: 500;
+    color: #4e4e4e;
+    font-size: 14px;
+    letter-spacing: -0.3px;
+    line-height: 24.6px;  
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.switch {position: relative; display: inline-block; width: 120px; height: 68px; margin-bottom: 20px;}
+.switch input {display: none;}
+.slider {position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; border-radius: 68px;   opacity: 0.8;   cursor: pointer;}
+.slider:before {position: absolute; content: ""; height: 52px; width: 52px; left: 8px; bottom: 8px; background-color: #fff; -webkit-transition: .4s; transition: .4s; border-radius: 68px}
+input:checked+.slider {background-color: #1b78e2}
+input:checked+.slider:before {-webkit-transform: translateX(52px); -ms-transform: translateX(52px); transform: translateX(52px)}
+.slider2 { -webkit-appearance: none; margin: 14px;  height: 20px; background: #ccc; outline: none; opacity: 0.8; -webkit-transition: .2s; transition: opacity .2s; margin-bottom: 40px; }
+.slider:hover, .slider2:hover { opacity: 1; }
+.slider2::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 40px; height: 40px; background: #008B74; cursor: pointer; }
+.slider2::-moz-range-thumb { width: 40px; height: 40px; background: #008B74; cursor: pointer;}
+.card-switch {color: #50a2ff; }
+.card-light{ color: #008B74;}
+.card-bme{ color: #572dfb;}
+.card-motion{ color: #3b3b3b; cursor: pointer;}
+
+

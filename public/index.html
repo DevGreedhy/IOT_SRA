@@ -1,0 +1,118 @@
+<!-- Complete Project Details at: https://RandomNerdTutorials.com/ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IOT | GRUPO5 | SRA</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+    <!-- update the version number as needed -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+    <!-- include only the Firebase features as you need -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.7/all/gauge.min.js"></script>
+
+    <script>
+     // REPLACE WITH YOUR web app's Firebase configuration
+     const firebaseConfig = {
+      apiKey: "AIzaSyB28mtCRswFWgbuQqr0LgVx1PwCNb2KRQ4",
+      authDomain: "esp-sra.firebaseapp.com",
+      projectId: "esp-sra",
+      storageBucket: "esp-sra.appspot.com",
+      messagingSenderId: "395724411400",
+      appId: "1:395724411400:web:4df8e0853db751c16037bd",
+      measurementId: "G-WTCTF140XQ"
+    };
+      // Initialize firebase
+      firebase.initializeApp(firebaseConfig);
+
+      // Make auth and database references
+      const auth = firebase.auth();
+      const db = firebase.database();
+
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="plant-pot.png">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <!--TOP BAR-->
+  <div class="topnav">
+    <div class="overlap-2">
+        <div class="text-container">
+            <div class="text-wrapper-2">MONITOREO DE PLANTAS</div>
+            <div class="text-wrapper">Sistema de Riego Automático</div>
+        </div>
+        <i class="fas fa-seedling" id="plant-icon" style="color:#5b6b3a;"></i>
+    </div>
+</div>
+
+  <!--AUTHENTICATION BAR (USER DETAILS/LOGOUT BUTTON)-->
+  <div id="authentication-bar" style="display: none;">
+    <p><span id="authentication-status">Iniciaste sesión como:</span>
+       <span id="user-details">USEREMAIL</span>
+       <a href="/" id="logout-link">(cerrar sesión)</a>
+    </p>
+  </div>
+
+  <!--LOGIN FORM-->
+  <form id="login-form" style="display: none;">
+    <div class="form-elements-container">
+      <label for="input-email"><b>Correo electronico</b></label>
+      <input type="text" placeholder="Ingresa tu correo" id="input-email" required>
+
+      <label for="input-password"><b>Contraseña</b></label>
+      <input type="password" placeholder="Ingresa tu contraseña" id="input-password" required>
+
+      <button type="submit" id="login-button">Iniciar sesion</button>
+      <p id="error-message" style="color:red;"></p>
+    </div>
+  </form>
+
+  <!--CONTENT (SENSOR READINGS)-->
+<div class="content-sign-in" id="content-sign-in" style="display: none;">
+  <div>
+    <p class="dashboard-title">DASHBOARD</p>
+  </div>
+  <div class="cards">
+    <!-- ESTADO DE LA BOMBA -->
+    <div class="card">
+      <p><i class="fa fa-power-off"></i>ESTADO DE LA BOMBA</p>
+      <p id="bomba"><span class="reading">-</span></p>
+    </div>
+    <!-- PORCENTAJE DE HUMEDAD -->
+    <div class="card">
+      <p><i class="fas fa-tint" style="color:#00add6;"></i>HUMEDAD DE LA PLANTA</p>
+      <p><span class="reading"><span id="sensor">-</span></span></p>
+    </div>
+  </div>
+  <div id="charts-div">
+    <!-- GRAFICA -->
+    <div>
+      <p class="dashboard-title">GRAFICA</p>
+    </div>
+    <!-- HUMEDAD CHART -->
+    <div class="cards">
+      <div class="card">
+        <p><i class="fas fa-tint" style="color:#00add6;"></i>GRAFICA DE HUMEDAD</p>
+        <div id="chart-sensor" class="chart-container"></div>
+      </div>
+    </div>
+    <button id="generate-pdf-button">Monitoreo de humedad</button>
+  </div>
+</div>
+
+    <script src="scripts/auth.js"></script>
+    
+    <script src="scripts/charts-definitions.js"></script>
+    
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
